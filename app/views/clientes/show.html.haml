@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @cliente.nome
+%p
+  %b Sexo:
+  = @cliente.sexo
+%p
+  %b Email:
+  = @cliente.email
+%p
+  %b Login:
+  = @cliente.login
+%p
+  %b Senha:
+  = @cliente.senha
+
+= link_to 'Edit', edit_cliente_path(@cliente)
+\|
+= link_to 'Back', clientes_path
