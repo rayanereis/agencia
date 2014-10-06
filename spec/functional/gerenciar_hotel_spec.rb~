@@ -26,17 +26,16 @@ feature 'gerenciar Hotel' do
 
   end
 
-   scenario 'excluir hotel' do #, :javascript => true  do
+ scenario 'excluir usuario' do #, :javascript => true  do
 
-       hotel = FactoryGirl.create(:hotel)
+       usuario = FactoryGirl.create(:usuario)
 
-        visit hoteis_path
+        visit usuarios_path
 
         click_link 'Excluir'
 
-
-
   end
+
 
    def preencher_e_verificar_hotel
 

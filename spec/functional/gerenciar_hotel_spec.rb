@@ -25,6 +25,18 @@ feature 'gerenciar Hotel' do
 
 
   end
+
+ scenario 'excluir Hotel' do #, :javascript => true  do
+
+       usuario = FactoryGirl.create(:hotel)
+
+        visit usuarios_path
+
+        click_link 'Excluir'
+
+  end
+
+
    def preencher_e_verificar_hotel
 
       fill_in 'Nome',  :with => "Bela Vista"

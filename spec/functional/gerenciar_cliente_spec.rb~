@@ -1,0 +1,56 @@
+# coding: utf-8
+
+require 'rails_helper'
+
+feature 'gerenciar Usuario' do
+
+  scenario 'incluir Usuario' do # , :js => true  do
+
+    visit new_usuario_path
+
+    preencher_e_verificar_usuario
+
+
+
+  end
+
+  scenario 'alterar Usuario' do #, :js => true  do
+
+    usuario = FactoryGirl.create(:usuario)
+
+    visit edit_usuario_path(usuario)
+
+    preencher_e_verificar_usuario
+
+  end
+
+ scenario 'excluir setor' do #, :javascript => true  do
+
+       setor = FactoryGirl.create(:usuario)
+
+        visit setors_path
+
+        click_link 'Excluir'
+
+  end
+
+   def preencher_e_verificar_usuario
+
+      fill_in 'Nome',  :with => "Fulano"
+      fill_in 'Senha',  :with => "12345"
+      fill_in 'Email',  :with => "fulano@fulano.com"
+
+
+
+
+
+      click_button 'Salvar'
+
+      expect(page).to have_content 'Nome: Fulano'
+      expect(page).to have_content 'Cnpj: 12345'
+      expect(page).to have_content 'Email: fulano@fulano.com'
+
+
+
+   end
+end
