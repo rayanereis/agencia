@@ -1,0 +1,10 @@
+= simple_form_for(@hotel) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome
+    = f.input :cnpj
+    = f.input :email
+
+  .form-actions
+    = f.button :submit
