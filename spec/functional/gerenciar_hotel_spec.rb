@@ -28,9 +28,9 @@ feature 'gerenciar Hotel' do
 
  scenario 'excluir Hotel' do #, :javascript => true  do
 
-       usuario = FactoryGirl.create(:hotel)
+       	hotel = FactoryGirl.create(:hotel)
 
-        visit usuarios_path
+        visit hoteis_path
 
         click_link 'Excluir'
 

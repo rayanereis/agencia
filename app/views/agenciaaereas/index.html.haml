@@ -1,0 +1,23 @@
+%h1 Listing agenciaaereas
+
+%table
+  %tr
+    %th Nome
+    %th Cnpj
+    %th Email
+    %th
+    %th
+    %th
+
+  - @agenciaaereas.each do |agenciaaerea|
+    %tr
+      %td= agenciaaerea.nome
+      %td= agenciaaerea.cnpj
+      %td= agenciaaerea.email
+      %td= link_to 'Show', agenciaaerea
+      %td= link_to 'Edit', edit_agenciaaerea_path(agenciaaerea)
+      %td= link_to 'Excluir', agenciaaerea, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Agenciaaerea', new_agenciaaerea_path

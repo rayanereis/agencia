@@ -7,6 +7,4 @@
     = f.input :email
 
   .form-actions
-    = f.button :submit, 'Salvar'
-
-
+    = f.button :submit
