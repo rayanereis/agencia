@@ -28,15 +28,9 @@ feature 'gerenciar Hotel' do
 
  scenario 'excluir Hotel' do #, :javascript => true  do
 
-<<<<<<< HEAD
-       	hotel = FactoryGirl.create(:hotel)
+       hotel = FactoryGirl.create(:hotel)
 
         visit hoteis_path
-=======
-       usuario = FactoryGirl.create(:hotel)
-
-        visit usuarios_path
->>>>>>> 61d0dae675cc3e5bc45753a03ac3ff1e296511a9
 
         click_link 'Excluir'
 
@@ -45,15 +39,15 @@ feature 'gerenciar Hotel' do
 
    def preencher_e_verificar_hotel
 
-      fill_in 'Nome',  :with => "Bela Vista"
+      fill_in 'Nome',  :with => "Voa Bem"
       fill_in 'Cnpj',  :with => "12345"
-      fill_in 'Email',  :with => "bela@vista.com"
+      fill_in 'Email',  :with => "voa@bem.com"
 
       click_button 'Salvar'
 
-      expect(page).to have_content 'Nome: Bela Vista'
+      expect(page).to have_content 'Nome: Voa Bem'
       expect(page).to have_content 'Cnpj: 12345'
-      expect(page).to have_content 'Email: bela@vista.com'
+      expect(page).to have_content 'Email: voa@bem.com'
 
 
 
