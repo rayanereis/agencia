@@ -1,0 +1,10 @@
+= simple_form_for(@usuario) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome
+    = f.input :email
+    = f.input :senha
+
+  .form-actions
+    = f.button :submit, 'Salvar'
