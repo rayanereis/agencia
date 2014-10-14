@@ -26,9 +26,15 @@ feature 'gerenciar Hotel' do
 
   end
 
+<<<<<<< HEAD
  scenario 'excluir Hotel' do #, :javascript => true  do
 
        	hotel = FactoryGirl.create(:hotel)
+=======
+ scenario 'excluir usuario' do #, :javascript => true  do
+
+       usuario = FactoryGirl.create(:usuario)
+>>>>>>> 61d0dae675cc3e5bc45753a03ac3ff1e296511a9
 
         visit usuarios_path
 

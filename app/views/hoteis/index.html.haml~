@@ -12,6 +12,7 @@
   - @hoteis.each do |hotel|
     %tr
       %td= hotel.nome
+<<<<<<< HEAD
       %td= hotel.cnpj
       %td= hotel.email
       %td= link_to 'Show', hotel
@@ -20,4 +21,13 @@
 
 %br
 
+=======
+      %td= link_to 'Show', hotel
+      %td= link_to 'Edit', edit_hotel_path(hotel)
+      %td= link_to 'Excluir', hotel, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+
+>>>>>>> 61d0dae675cc3e5bc45753a03ac3ff1e296511a9
 = link_to 'New Hotel', new_hotel_path

@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :agenciaaereas
 
+=======
+>>>>>>> 61d0dae675cc3e5bc45753a03ac3ff1e296511a9
   resources :hoteis
 
   # The priority is based upon order of creation: first created -> highest priority.
