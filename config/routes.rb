@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :empresa_aereas
+
   resources :hoteis
 
   # The priority is based upon order of creation: first created -> highest priority.

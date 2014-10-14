@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @empresa_aerea.nome
+%p
+  %b Cnpj:
+  = @empresa_aerea.cnpj
+%p
+  %b Email:
+  = @empresa_aerea.email
+
+= link_to 'Edit', edit_empresa_aerea_path(@empresa_aerea)
+\|
+= link_to 'Back', empresa_aereas_path
