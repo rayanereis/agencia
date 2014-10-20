@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141014033037) do
+ActiveRecord::Schema.define(version: 20141019022147) do
 
   create_table "empresa_aereas", force: true do |t|
     t.string   "nome"
@@ -28,6 +28,34 @@ ActiveRecord::Schema.define(version: 20141014033037) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "qualificacao_hoteis", force: true do |t|
+    t.boolean  "concretizado"
+    t.integer  "justificativa"
+    t.integer  "nivel"
+    t.string   "comentario"
+    t.integer  "usuario_id"
+    t.integer  "hotel_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "qualificacao_hoteis", ["hotel_id"], name: "index_qualificacao_hoteis_on_hotel_id"
+  add_index "qualificacao_hoteis", ["usuario_id"], name: "index_qualificacao_hoteis_on_usuario_id"
+
+  create_table "qualificacao_passagens", force: true do |t|
+    t.boolean  "concretizado"
+    t.integer  "justificativa"
+    t.integer  "nivel"
+    t.string   "comentario"
+    t.integer  "usuario_id"
+    t.integer  "empresa_aerea_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "qualificacao_passagens", ["empresa_aerea_id"], name: "index_qualificacao_passagens_on_empresa_aerea_id"
+  add_index "qualificacao_passagens", ["usuario_id"], name: "index_qualificacao_passagens_on_usuario_id"
 
   create_table "usuarios", force: true do |t|
     t.string   "nome"

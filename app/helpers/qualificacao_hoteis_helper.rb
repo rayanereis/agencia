@@ -1,0 +1,2 @@
+module QualificacaoHoteisHelper
+end

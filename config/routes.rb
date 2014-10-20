@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :qualificacao_hoteis
+
   resources :usuarios
 
   resources :empresa_aereas

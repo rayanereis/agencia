@@ -39,15 +39,15 @@ feature 'gerenciar Hotel' do
 
    def preencher_e_verificar_hotel
 
-      fill_in 'Nome',  :with => "Voa Bem"
+      fill_in 'Nome',  :with => "Hotel Bela Vida"
       fill_in 'Cnpj',  :with => "12345"
-      fill_in 'Email',  :with => "voa@bem.com"
+      fill_in 'Email',  :with => "belavidahotel@bvh.com"
 
       click_button 'Salvar'
 
-      expect(page).to have_content 'Nome: Voa Bem'
+      expect(page).to have_content 'Nome: Hotel Bela Vida'
       expect(page).to have_content 'Cnpj: 12345'
-      expect(page).to have_content 'Email: voa@bem.com'
+      expect(page).to have_content 'Email: belavidahotel@bvh.com'
 
 
 

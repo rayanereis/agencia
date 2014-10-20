@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Concretizado:
+  = @qualificacao_hotel.concretizado
+%p
+  %b Justificativa:
+  = @qualificacao_hotel.justificativa
+%p
+  %b Nivel:
+  = @qualificacao_hotel.nivel
+%p
+  %b Comentario:
+  = @qualificacao_hotel.comentario
+%p
+  %b Usuario:
+  = @qualificacao_hotel.usuario.nome
+%p
+  %b Hotel:
+  = @qualificacao_hotel.hotel.nome
+
+= link_to 'Edit', edit_qualificacao_hotel_path(@qualificacao_hotel)
+\|
+= link_to 'Back', qualificacao_hoteis_path

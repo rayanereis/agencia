@@ -1,0 +1,29 @@
+%h1 Listing qualificacao_hoteis
+
+%table
+  %tr
+    %th Concretizado
+    %th Justificativa
+    %th Nivel
+    %th Comentario
+    %th Usuario
+    %th Hotel
+    %th
+    %th
+    %th
+
+  - @qualificacao_hoteis.each do |qualificacao_hotel|
+    %tr
+      %td= qualificacao_hotel.concretizado
+      %td= qualificacao_hotel.justificativa
+      %td= qualificacao_hotel.nivel
+      %td= qualificacao_hotel.comentario
+      %td= qualificacao_hotel.usuario
+      %td= qualificacao_hotel.hotel
+      %td= link_to 'Show', qualificacao_hotel
+      %td= link_to 'Edit', edit_qualificacao_hotel_path(qualificacao_hotel)
+      %td= link_to 'Excluir', qualificacao_hotel, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Qualificacao hotel', new_qualificacao_hotel_path
