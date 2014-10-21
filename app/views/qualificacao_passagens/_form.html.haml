@@ -1,0 +1,13 @@
+= simple_form_for(@qualificacao_passagem) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :concretizado
+    = f.input :justificativa
+    = f.input :nivel
+    = f.input :comentario
+    = f.association :empresa_aerea , label_method: :nome
+    = f.association :usuario, label_method: :nome
+
+  .form-actions
+    = f.button :submit, 'Salvar'

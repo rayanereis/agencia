@@ -41,10 +41,10 @@ feature 'gerenciar QualificacaoPassagem' do
 
    def preencher_e_verificar_qualificacao_passagem
 
-      check 'concretizado'
-      fill_in 'justificativa',  :with => "1"
-      fill_in 'nivel',  :with => "1"
-      fill_in 'comentario',  :with => "ok"
+      check 'Concretizado'
+      fill_in 'Justificativa',  :with => "1"
+      fill_in 'Nivel',  :with => "1"
+      fill_in 'Comentario',  :with => "ok"
       select 'Voa Bem', from: 'Empresa aerea'
       select 'Fulano', from: 'Usuario'
 

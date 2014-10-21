@@ -1,0 +1,29 @@
+%h1 Listing qualificacao_passagens
+
+%table
+  %tr
+    %th Concretizado
+    %th Justificativa
+    %th Nivel
+    %th Comentario
+    %th Empresa aerea
+    %th Usuario
+    %th
+    %th
+    %th
+
+  - @qualificacao_passagens.each do |qualificacao_passagem|
+    %tr
+      %td= qualificacao_passagem.concretizado
+      %td= qualificacao_passagem.justificativa
+      %td= qualificacao_passagem.nivel
+      %td= qualificacao_passagem.comentario
+      %td= qualificacao_passagem.empresa_aerea
+      %td= qualificacao_passagem.usuario
+      %td= link_to 'Show', qualificacao_passagem
+      %td= link_to 'Edit', edit_qualificacao_passagem_path(qualificacao_passagem)
+      %td= link_to 'Excluir', qualificacao_passagem, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Qualificacao passagem', new_qualificacao_passagem_path

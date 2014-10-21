@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Concretizado:
+  = @qualificacao_passagem.concretizado
+%p
+  %b Justificativa:
+  = @qualificacao_passagem.justificativa
+%p
+  %b Nivel:
+  = @qualificacao_passagem.nivel
+%p
+  %b Comentario:
+  = @qualificacao_passagem.comentario
+%p
+  %b Empresa aerea:
+  = @qualificacao_passagem.empresa_aerea.nome
+%p
+  %b Usuario:
+  = @qualificacao_passagem.usuario.nome
+
+= link_to 'Edit', edit_qualificacao_passagem_path(@qualificacao_passagem)
+\|
+= link_to 'Back', qualificacao_passagens_path

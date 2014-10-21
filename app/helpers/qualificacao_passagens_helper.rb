@@ -1,0 +1,2 @@
+module QualificacaoPassagensHelper
+end
