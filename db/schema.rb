@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141025171745) do
+ActiveRecord::Schema.define(version: 20141025182427) do
 
   create_table "empresa_aereas", force: true do |t|
     t.string   "nome"
@@ -28,6 +28,21 @@ ActiveRecord::Schema.define(version: 20141025171745) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "pacotes", force: true do |t|
+    t.string   "destino"
+    t.integer  "quantidadepessoas"
+    t.float    "total"
+    t.integer  "usuario_id"
+    t.integer  "reservar_passagem_id"
+    t.integer  "reserva_diaria_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pacotes", ["reserva_diaria_id"], name: "index_pacotes_on_reserva_diaria_id"
+  add_index "pacotes", ["reservar_passagem_id"], name: "index_pacotes_on_reservar_passagem_id"
+  add_index "pacotes", ["usuario_id"], name: "index_pacotes_on_usuario_id"
 
   create_table "qualificacao_hoteis", force: true do |t|
     t.boolean  "concretizado"

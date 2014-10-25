@@ -1,0 +1,29 @@
+%h1 Listing pacotes
+
+%table
+  %tr
+    %th Destino
+    %th Quantidadepessoas
+    %th Total
+    %th Usuario
+    %th Reservar passagem
+    %th Reserva diaria
+    %th
+    %th
+    %th
+
+  - @pacotes.each do |pacote|
+    %tr
+      %td= pacote.destino
+      %td= pacote.quantidadepessoas
+      %td= pacote.total
+      %td= pacote.usuario
+      %td= pacote.reservar_passagem
+      %td= pacote.reserva_diaria
+      %td= link_to 'Show', pacote
+      %td= link_to 'Edit', edit_pacote_path(pacote)
+      %td= link_to 'Excluir', pacote, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Pacote', new_pacote_path

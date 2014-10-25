@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Destino:
+  = @pacote.destino
+%p
+  %b Quantidade:
+  = @pacote.quantidadepessoas
+%p
+  %b Total:
+  = @pacote.total
+%p
+  %b Usuario:
+  = @pacote.usuario.nome
+%p
+  %b Reservar passagem:
+  = @pacote.reservar_passagem.destino
+%p
+  %b Reserva diaria:
+  = @pacote.reserva_diaria.periodo_inicial
+
+= link_to 'Edit', edit_pacote_path(@pacote)
+\|
+= link_to 'Back', pacotes_path

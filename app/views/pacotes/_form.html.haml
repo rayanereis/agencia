@@ -1,0 +1,14 @@
+= simple_form_for(@pacote) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :destino
+    = f.input :quantidadepessoas
+    = f.input :total
+    = f.association :usuario, label_method: :nome
+    = f.association :reservar_passagem, label_method: :destino
+    = f.association :reserva_diaria, label_method: :periodo_inicial
+
+
+  .form-actions
+    = f.button :submit, 'Salvar'

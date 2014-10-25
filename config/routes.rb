@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :pacotes
+
   resources :reservar_passagens
 
   resources :reserva_diarias
