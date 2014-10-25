@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Periodo inicial:
+  = @reserva_diaria.periodo_inicial
+%p
+  %b Periodo final:
+  = @reserva_diaria.periodo_final
+%p
+  %b Valor unitario:
+  = @reserva_diaria.valor_unitario
+%p
+  %b Vagas disponiveis:
+  = @reserva_diaria.vagas_disponiveis
+%p
+  %b Hotel:
+  = @reserva_diaria.hotel.nome
+
+= link_to 'Edit', edit_reserva_diaria_path(@reserva_diaria)
+\|
+= link_to 'Back', reserva_diarias_path

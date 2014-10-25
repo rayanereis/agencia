@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141019022147) do
+ActiveRecord::Schema.define(version: 20141025161502) do
 
   create_table "empresa_aereas", force: true do |t|
     t.string   "nome"
@@ -56,6 +56,18 @@ ActiveRecord::Schema.define(version: 20141019022147) do
 
   add_index "qualificacao_passagens", ["empresa_aerea_id"], name: "index_qualificacao_passagens_on_empresa_aerea_id"
   add_index "qualificacao_passagens", ["usuario_id"], name: "index_qualificacao_passagens_on_usuario_id"
+
+  create_table "reserva_diarias", force: true do |t|
+    t.string   "periodo_inicial"
+    t.string   "periodo_final"
+    t.string   "valor_unitario"
+    t.string   "vagas_disponiveis"
+    t.integer  "hotel_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "reserva_diarias", ["hotel_id"], name: "index_reserva_diarias_on_hotel_id"
 
   create_table "usuarios", force: true do |t|
     t.string   "nome"

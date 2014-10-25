@@ -1,0 +1,12 @@
+= simple_form_for(@reserva_diaria) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :periodo_inicial
+    = f.input :periodo_final
+    = f.input :valor_unitario
+    = f.input :vagas_disponiveis
+    = f.association :hotel, label_method: :nome
+
+  .form-actions
+    = f.button :submit, 'Salvar'

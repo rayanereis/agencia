@@ -41,20 +41,21 @@ feature 'gerenciar Reserva Diarias' do
 
    def preencher_e_verificar_reserva_diaria
 
-      fill_in 'periodo_inicial',  :with => "01/09/15"
-      fill_in 'periodo_final',  :with => "30/09/15"
-      fill_in 'valor_unitario',  :with => "177"
-      fill_in 'vagas_disponiveis',  :with => "100"
+      fill_in 'Periodo inicial',  :with => "01/09/15"
+      fill_in 'Periodo final',  :with => "30/09/15"
+      fill_in 'Valor unitario',  :with => "177"
+      fill_in 'Vagas disponiveis',  :with => "100"
       
-      select 'Hotel Bela Vida', from: 'hotel'
+      select 'Hotel Bela Vida', from: 'Hotel'
 
       click_button 'Salvar'
 
-      expect(page).to have_content 'periodo_inicial: 01/09/15'
-      expect(page).to have_content 'periodo_final: 30/09/15'
-      expect(page).to have_content 'valor_unitario: 177' 
-      expect(page).to have_content 'vagas_disponiveis: 100'
+      expect(page).to have_content 'Periodo inicial: 01/09/15'
+      expect(page).to have_content 'Periodo final: 30/09/15'
+      expect(page).to have_content 'Valor unitario: 177' 
+      expect(page).to have_content 'Vagas disponiveis: 100'
 
       expect(page).to have_content 'Hotel: Hotel Bela Vida'
  end
 end
+

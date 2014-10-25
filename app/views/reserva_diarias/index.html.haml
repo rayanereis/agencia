@@ -1,0 +1,27 @@
+%h1 Listing reserva_diarias
+
+%table
+  %tr
+    %th Periodo inicial
+    %th Periodo final
+    %th Valor unitario
+    %th Vagas disponiveis
+    %th Hotel
+    %th
+    %th
+    %th
+
+  - @reserva_diarias.each do |reserva_diaria|
+    %tr
+      %td= reserva_diaria.periodo_inicial
+      %td= reserva_diaria.periodo_final
+      %td= reserva_diaria.valor_unitario
+      %td= reserva_diaria.vagas_disponiveis
+      %td= reserva_diaria.hotel
+      %td= link_to 'Show', reserva_diaria
+      %td= link_to 'Edit', edit_reserva_diaria_path(reserva_diaria)
+      %td= link_to 'Excluir', reserva_diaria, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Reserva diaria', new_reserva_diaria_path
