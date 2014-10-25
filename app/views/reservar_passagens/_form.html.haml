@@ -1,0 +1,15 @@
+= simple_form_for(@reservar_passagem) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :data_partida
+    = f.input :hora_partida
+    = f.input :minuto_partida
+    = f.input :origem
+    = f.input :destino
+    = f.input :valor_unitario
+    = f.input :vagas_disponiveis
+    = f.association :empresa_aerea,  label_method: :nome
+
+  .form-actions
+    = f.button :submit, 'Salvar'

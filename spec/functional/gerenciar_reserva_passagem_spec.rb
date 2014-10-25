@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-feature 'gerenciar Reserva Passagens' do
+feature 'gerenciar Reservar Passagens' do
 
   before :each do
    
@@ -12,53 +12,55 @@ feature 'gerenciar Reserva Passagens' do
  
    let(:empresa_aerea) {create(:empresa_aerea, nome: 'VRG', cnpj:'98765', email:'gollinhasaereas@gol.com')}
 
-  scenario 'incluir Reserva Passagens' do # , :js => true  do
+  scenario 'incluir Reservar Passagens' do # , :js => true  do
 
-    visit new_reserva_passagem_path
+    visit new_reservar_passagem_path
 
-    preencher_e_verificar_reserva_passagem
+    preencher_e_verificar_reservar_passagem
   end
 
-  scenario 'alterar Reserva Passagens' do #, :js => true  do
+  scenario 'alterar Reservar Passagens' do #, :js => true  do
 
-    reserva_passagem = FactoryGirl.create(:reserva_passagem,:hotel => hotel)
+    reservar_passagem = FactoryGirl.create(:reservar_passagem, :empresa_aerea => empresa_aerea)
 
-    visit edit_reserva_passagem_path(reserva_passagem)
+    visit edit_reservar_passagem_path(reservar_passagem)
 
-    preencher_e_verificar_reserva_passagem
+    preencher_e_verificar_reservar_passagem
   end
 
-   scenario 'excluir reserva_passagem' do #, :javascript => true  do
+   scenario 'excluir reservar_passagem' do #, :javascript => true  do
 
-       reserva_passagem = FactoryGirl.create(:reserva_passagem, :hotel => hotel)
+       reservar_passagem = FactoryGirl.create(:reservar_passagem, :empresa_aerea => empresa_aerea)
 
-        visit reserva_passagens_path
+        visit reservar_passagens_path
 
         click_link 'Excluir'
  end
 
-   def preencher_e_verificar_reserva_passagem
+   def preencher_e_verificar_reservar_passagem
 
-      fill_in 'data',  :with => "01/09/15"
-      fill_in 'hora_partida',  :with => "13"
-      fill_in 'minuto_partida',  :with => "30"
-      fill_in 'origem',  :with => "Campinas SP"
-      fill_in 'destino',  :with => "Florianopolis"
-      fill_in 'valor_unitario',  :with => "660"
-      fill_in 'vagas_disponiveis',  :with => "100"
+      fill_in 'Data partida',  :with => "2014-10-25"
+     
+      fill_in 'Hora partida',  :with => "13"
+      fill_in 'Minuto partida',  :with => "30"
+      fill_in 'Origem',  :with => "Campinas SP"
+      fill_in 'Destino',  :with => "Florianopolis"
+      fill_in 'Valor unitario',  :with => "660"
+      fill_in 'Vagas disponiveis',  :with => "100"
       
-      select 'Voa Bem', from: 'empresa_aerea'
+      select 'Voa Bem', from: 'Empresa aerea'
 
       click_button 'Salvar'
 
-      expect(page).to have_content 'data: 01/09/15'
-      expect(page).to have_content 'hora_partida: 13'
-      expect(page).to have_content 'minuto_partida: 30' 
-      expect(page).to have_content 'origem: Campinas SP' 
-      expect(page).to have_content 'destino: Florianopolis'
-      expect(page).to have_content 'valor_unitario: 177' 
-      expect(page).to have_content 'vagas_disponiveis: 100'
+      expect(page).to have_content 'Data partida:  2014-10-25'
+      expect(page).to have_content 'Hora partida: 13'
+      expect(page).to have_content 'Minuto partida: 30' 
+      expect(page).to have_content 'Origem: Campinas SP' 
+      expect(page).to have_content 'Destino: Florianopolis'
+      expect(page).to have_content 'Valor unitario: 660' 
+      expect(page).to have_content 'Vagas disponiveis: 100'
 
-       expect(page).to have_content 'empresa_aerea: Voa Bem'
+       expect(page).to have_content 'Empresa aerea: Voa Bem'
  end
 end
+

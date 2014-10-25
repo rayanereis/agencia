@@ -1,0 +1,33 @@
+%h1 Listing reservar_passagens
+
+%table
+  %tr
+    %th Data partida
+    %th Hora partida
+    %th Minuto partida
+    %th Origem
+    %th Destino
+    %th Valor unitario
+    %th Vagas disponiveis
+    %th Empresa aerea
+    %th
+    %th
+    %th
+
+  - @reservar_passagens.each do |reservar_passagem|
+    %tr
+      %td= reservar_passagem.data_partida
+      %td= reservar_passagem.hora_partida
+      %td= reservar_passagem.minuto_partida
+      %td= reservar_passagem.origem
+      %td= reservar_passagem.destino
+      %td= reservar_passagem.valor_unitario
+      %td= reservar_passagem.vagas_disponiveis
+      %td= reservar_passagem.empresa_aerea
+      %td= link_to 'Show', reservar_passagem
+      %td= link_to 'Edit', edit_reservar_passagem_path(reservar_passagem)
+      %td= link_to 'Excluir', reservar_passagem, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Reservar passagem', new_reservar_passagem_path

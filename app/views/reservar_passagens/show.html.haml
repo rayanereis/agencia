@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Data partida:
+  = @reservar_passagem.data_partida
+%p
+  %b Hora partida:
+  = @reservar_passagem.hora_partida
+%p
+  %b Minuto partida:
+  = @reservar_passagem.minuto_partida
+%p
+  %b Origem:
+  = @reservar_passagem.origem
+%p
+  %b Destino:
+  = @reservar_passagem.destino
+%p
+  %b Valor unitario:
+  = @reservar_passagem.valor_unitario
+%p
+  %b Vagas disponiveis:
+  = @reservar_passagem.vagas_disponiveis
+%p
+  %b Empresa aerea:
+  = @reservar_passagem.empresa_aerea.nome
+
+= link_to 'Edit', edit_reservar_passagem_path(@reservar_passagem)
+\|
+= link_to 'Back', reservar_passagens_path

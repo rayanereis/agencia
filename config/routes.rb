@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :reservar_passagens
+
   resources :reserva_diarias
 
   resources :qualificacao_passagens
