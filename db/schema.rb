@@ -97,6 +97,8 @@ ActiveRecord::Schema.define(version: 20141025182427) do
     t.datetime "updated_at"
   end
 
+  add_index "reserva_passagens", ["empresa_aerea_id"], name: "index_reserva_passagens_on_empresa_aerea_id"
+
   create_table "reservar_passagens", force: true do |t|
     t.string   "data_partida"
     t.integer  "hora_partida"
