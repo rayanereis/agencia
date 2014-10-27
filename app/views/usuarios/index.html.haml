@@ -1,11 +1,15 @@
-%h1 Listing usuarios
+%h1 Usuário Cadastrados
 
-%table
+%br
+%br
+
+%table.table.table-bordered.table-striped.table-condensed
+
   %tr
     %th Nome
     %th Email
-    %th Senha
-    %th
+   
+    %th Opções
     %th
     %th
 
@@ -13,11 +17,19 @@
     %tr
       %td= usuario.nome
       %td= usuario.email
-      %td= usuario.senha
-      %td= link_to 'Show', usuario
-      %td= link_to 'Edit', edit_usuario_path(usuario)
-      %td= link_to 'Excluir', usuario, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      
+      %td= link_to 'Detalhar', usuario, class: 'btn btn-theme'
+      %td= link_to 'Alterar', edit_usuario_path(usuario),  class: 'btn btn-theme'
+      %td= link_to 'Excluir', usuario, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-theme'
 
 %br
+%br
+%br
+%br
+%br
 
-= link_to 'New Usuario', new_usuario_path
+= link_to 'Cadastrar Usuario', new_usuario_path, class:'btn btn-theme02 btn-lg'
+%br
+%br
+%br
+%br
