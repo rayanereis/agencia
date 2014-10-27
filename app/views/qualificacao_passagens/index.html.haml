@@ -1,6 +1,9 @@
-%h1 Listing qualificacao_passagens
+%h1 Qualificações realizadas para Agência
+%br
+%br
 
-%table
+%table.table.table-bordered.table-striped.table-condensed
+
   %tr
     %th Concretizado
     %th Justificativa
@@ -8,7 +11,7 @@
     %th Comentario
     %th Empresa aerea
     %th Usuario
-    %th
+    %th Opções
     %th
     %th
 
@@ -18,12 +21,16 @@
       %td= qualificacao_passagem.justificativa
       %td= qualificacao_passagem.nivel
       %td= qualificacao_passagem.comentario
-      %td= qualificacao_passagem.empresa_aerea
-      %td= qualificacao_passagem.usuario
-      %td= link_to 'Show', qualificacao_passagem
-      %td= link_to 'Edit', edit_qualificacao_passagem_path(qualificacao_passagem)
-      %td= link_to 'Excluir', qualificacao_passagem, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= qualificacao_passagem.empresa_aerea.nome
+      %td= qualificacao_passagem.usuario.nome
+      %td= link_to 'Detalhar', qualificacao_passagem, class: 'btn btn-theme'
+      %td= link_to 'Editar', edit_qualificacao_passagem_path(qualificacao_passagem), class: 'btn btn-theme'
+      %td= link_to 'Excluir', qualificacao_passagem, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-theme'
 
 %br
 
-= link_to 'New Qualificacao passagem', new_qualificacao_passagem_path
+= link_to 'Qualificar Agência', new_qualificacao_passagem_path, class:'btn btn-theme02 btn-lg' 
+%br
+%br
+%br
+%br

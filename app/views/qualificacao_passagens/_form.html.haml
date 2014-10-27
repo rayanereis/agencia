@@ -2,12 +2,25 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :concretizado
+    = f.input :concretizado, class: 'checkbox'
+
+    %h4 * Digite sua opção: *
+    %p 1) Ocorreu td bem, Parabens!! ---  2)  Desisti da Compra --- 3) Fui enganado! --- 4) Outra
+    
+
     = f.input :justificativa
+    %br
+    %h4 * Digite sua opção: *
+    %p 1) Positivo  ---  2) Neutro  ---  3) Negativo
+
     = f.input :nivel
+
     = f.input :comentario
+
     = f.association :empresa_aerea , label_method: :nome
+
     = f.association :usuario, label_method: :nome
 
   .form-actions
-    = f.button :submit, 'Salvar'
+    = f.button :submit, 'Salvar', class: 'btn btn-round btn-danger'
+
