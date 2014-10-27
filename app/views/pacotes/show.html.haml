@@ -1,3 +1,4 @@
+%h1 Dados do Pacote
 %p#notice= notice
 
 %p
@@ -18,7 +19,10 @@
 %p
   %b Reserva diaria:
   = @pacote.reserva_diaria.periodo_inicial
+%br
+%br
+%br
 
-= link_to 'Edit', edit_pacote_path(@pacote)
+= link_to 'Editar', edit_pacote_path(@pacote), class:'btn btn-theme02'
 \|
-= link_to 'Back', pacotes_path
+= link_to 'Voltar', pacotes_path, class:'btn btn-theme03'

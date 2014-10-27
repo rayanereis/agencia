@@ -1,6 +1,9 @@
-%h1 Listing pacotes
+%h1 Pacotes Adquiridos
+%br
+%br
 
-%table
+%table.table.table-bordered.table-striped.table-condensed
+
   %tr
     %th Destino
     %th Quantidadepessoas
@@ -17,13 +20,13 @@
       %td= pacote.destino
       %td= pacote.quantidadepessoas
       %td= pacote.total
-      %td= pacote.usuario
-      %td= pacote.reservar_passagem
-      %td= pacote.reserva_diaria
-      %td= link_to 'Show', pacote
-      %td= link_to 'Edit', edit_pacote_path(pacote)
-      %td= link_to 'Excluir', pacote, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= pacote.usuario.nome
+      %td= pacote.reservar_passagem.destino
+      %td= pacote.reserva_diaria.periodo_inicial
+      %td= link_to 'Detalhar', pacote, class: 'btn btn-theme'
+      %td= link_to 'Editar', edit_pacote_path(pacote), class: 'btn btn-theme'
+      %td= link_to 'Excluir', pacote, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-theme'
 
 %br
 
-= link_to 'New Pacote', new_pacote_path
+= link_to 'Adquirir Pacote', new_pacote_path, class:'btn btn-theme02 btn-lg' 
