@@ -1,6 +1,10 @@
-%h1 Listing qualificacao_hoteis
+%h1 Qualificações realizadas para os Hoteis
 
-%table
+%br
+%br
+
+%table.table.table-bordered.table-striped.table-condensed
+
   %tr
     %th Concretizado
     %th Justificativa
@@ -8,7 +12,7 @@
     %th Comentario
     %th Usuario
     %th Hotel
-    %th
+    %th Opções
     %th
     %th
 
@@ -18,12 +22,17 @@
       %td= qualificacao_hotel.justificativa
       %td= qualificacao_hotel.nivel
       %td= qualificacao_hotel.comentario
-      %td= qualificacao_hotel.usuario
-      %td= qualificacao_hotel.hotel
-      %td= link_to 'Show', qualificacao_hotel
-      %td= link_to 'Edit', edit_qualificacao_hotel_path(qualificacao_hotel)
-      %td= link_to 'Excluir', qualificacao_hotel, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= qualificacao_hotel.usuario.nome
+      %td= qualificacao_hotel.hotel.nome
+      %td= link_to 'Detalhar', qualificacao_hotel, class: 'btn btn-theme'
+      %td= link_to 'Editar', edit_qualificacao_hotel_path(qualificacao_hotel), class: 'btn btn-theme'
+      %td= link_to 'Excluir', qualificacao_hotel, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-theme'
 
 %br
 
-= link_to 'New Qualificacao hotel', new_qualificacao_hotel_path
+= link_to 'Qualificar Hotel', new_qualificacao_hotel_path, class:'btn btn-theme02 btn-lg' 
+%br
+%br
+%br
+%br
+

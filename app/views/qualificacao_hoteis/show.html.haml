@@ -1,3 +1,5 @@
+%h1 Dados da Qualificação dada ao Hotel
+
 %p#notice= notice
 
 %p
@@ -18,7 +20,10 @@
 %p
   %b Hotel:
   = @qualificacao_hotel.hotel.nome
+  %br
+  %br
+  %br
 
-= link_to 'Edit', edit_qualificacao_hotel_path(@qualificacao_hotel)
+= link_to 'Editar', edit_qualificacao_hotel_path(@qualificacao_hotel), class:'btn btn-theme02'
 \|
-= link_to 'Back', qualificacao_hoteis_path
+= link_to 'Voltar', qualificacao_hoteis_path, class:'btn btn-theme03'
