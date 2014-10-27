@@ -2,14 +2,14 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :data_partida
-    = f.input :hora_partida
-    = f.input :minuto_partida
-    = f.input :origem
-    = f.input :destino
-    = f.input :valor_unitario
-    = f.input :vagas_disponiveis
-    = f.association :empresa_aerea,  label_method: :nome
+    = f.input :data_partida, class: 'form-control round-form'
+    = f.input :hora_partida, class: 'form-control round-form'
+    = f.input :minuto_partida, class: 'form-control round-form'
+    = f.input :origem, class: 'form-control round-form'
+    = f.input :destino, class: 'form-control round-form'
+    = f.input :valor_unitario, class: 'form-control round-form'
+    = f.input :vagas_disponiveis, class: 'form-control round-form'
+    = f.association :empresa_aerea,  label_method: :nome, class: 'form-control round-form'
 
   .form-actions
-    = f.button :submit, 'Salvar'
+    = f.button :submit, 'Salvar', class: 'btn btn-round btn-danger'

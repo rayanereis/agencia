@@ -1,6 +1,10 @@
-%h1 Listing reservar_passagens
+%h1 Passagens Cadastradas
 
-%table
+
+%br
+%br
+
+%table.table.table-bordered.table-striped.table-condensed
   %tr
     %th Data partida
     %th Hora partida
@@ -10,7 +14,7 @@
     %th Valor unitario
     %th Vagas disponiveis
     %th Empresa aerea
-    %th
+    %th Opções
     %th
     %th
 
@@ -23,11 +27,15 @@
       %td= reservar_passagem.destino
       %td= reservar_passagem.valor_unitario
       %td= reservar_passagem.vagas_disponiveis
-      %td= reservar_passagem.empresa_aerea
-      %td= link_to 'Show', reservar_passagem
-      %td= link_to 'Edit', edit_reservar_passagem_path(reservar_passagem)
-      %td= link_to 'Excluir', reservar_passagem, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= reservar_passagem.empresa_aerea.nome
+      %td= link_to 'Detalhar', reservar_passagem, class: 'btn btn-theme'
+      %td= link_to 'Editar', edit_reservar_passagem_path(reservar_passagem), class: 'btn btn-theme'
+      %td= link_to 'Excluir', reservar_passagem, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-theme'
 
 %br
 
-= link_to 'New Reservar passagem', new_reservar_passagem_path
+= link_to 'Cadastrar Reservar de passagem', new_reservar_passagem_path, class:'btn btn-theme02 btn-lg' 
+%br
+%br
+%br
+%br
