@@ -1,3 +1,4 @@
+%h1 Dados do Hotel
 %p#notice= notice
 
 %p
@@ -10,6 +11,6 @@
   %b Email:
   = @hotel.email
 
-= link_to 'Edit', edit_hotel_path(@hotel)
+= link_to 'Editar', edit_hotel_path(@hotel), class:'btn btn-theme02'
 \|
-= link_to 'Back', hoteis_path
+= link_to 'Voltar', hoteis_path, class:'btn btn-theme03'

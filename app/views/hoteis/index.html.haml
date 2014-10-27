@@ -1,11 +1,14 @@
-%h1 Listing hoteis
+%h1 Hoteis Cadastrados
 
-%table
+%br
+%br
+
+%table.table.table-bordered.table-striped.table-condensed
   %tr
     %th Nome
     %th Cnpj
     %th Email
-    %th
+    %th Opcoes
     %th
     %th
 
@@ -14,10 +17,17 @@
       %td= hotel.nome
       %td= hotel.cnpj
       %td= hotel.email
-      %td= link_to 'Show', hotel
-      %td= link_to 'Edit', edit_hotel_path(hotel)
-      %td= link_to 'Excluir', hotel, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Detalhar', hotel, class: 'btn btn-theme'
+      %td= link_to 'Alterar', edit_hotel_path(hotel), class: 'btn btn-theme'
+      %td= link_to 'Excluir', hotel, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-theme'
 
 %br
+%br
+%br
+%br
 
-= link_to 'New Hotel', new_hotel_path
+= link_to 'Cadastrar Hotel', new_hotel_path, class:'btn btn-theme02 btn-lg' 
+%br
+%br
+%br
+%br
