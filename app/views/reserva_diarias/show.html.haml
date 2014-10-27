@@ -1,3 +1,4 @@
+%h1 Dados da Diária
 %p#notice= notice
 
 %p
@@ -16,6 +17,6 @@
   %b Hotel:
   = @reserva_diaria.hotel.nome
 
-= link_to 'Edit', edit_reserva_diaria_path(@reserva_diaria)
+= link_to 'Editar', edit_reserva_diaria_path(@reserva_diaria), class:'btn btn-theme02'
 \|
-= link_to 'Back', reserva_diarias_path
+= link_to 'Voltar', reserva_diarias_path, class:'btn btn-theme03'

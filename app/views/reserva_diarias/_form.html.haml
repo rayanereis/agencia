@@ -2,11 +2,11 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :periodo_inicial
-    = f.input :periodo_final
-    = f.input :valor_unitario
-    = f.input :vagas_disponiveis
-    = f.association :hotel, label_method: :nome
+    = f.input :periodo_inicial, class: 'form-control round-form'
+    = f.input :periodo_final, class: 'form-control round-form'
+    = f.input :valor_unitario, class: 'form-control round-form'
+    = f.input :vagas_disponiveis, class: 'form-control round-form'
+    = f.association :hotel, label_method: :nome, class: 'form-control round-form'
 
   .form-actions
-    = f.button :submit, 'Salvar'
+    = f.button :submit, 'Salvar', class: 'btn btn-round btn-danger'

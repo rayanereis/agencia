@@ -1,6 +1,9 @@
-%h1 Listing reserva_diarias
+%h1 Reserva Diárias Cadastradas
 
-%table
+%br
+%br
+
+%table.table.table-bordered.table-striped.table-condensed
   %tr
     %th Periodo inicial
     %th Periodo final
@@ -17,11 +20,11 @@
       %td= reserva_diaria.periodo_final
       %td= reserva_diaria.valor_unitario
       %td= reserva_diaria.vagas_disponiveis
-      %td= reserva_diaria.hotel
-      %td= link_to 'Show', reserva_diaria
-      %td= link_to 'Edit', edit_reserva_diaria_path(reserva_diaria)
-      %td= link_to 'Excluir', reserva_diaria, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= reserva_diaria.hotel.nome
+      %td= link_to 'Detalhar', reserva_diaria, class: 'btn btn-theme'
+      %td= link_to 'Editar', edit_reserva_diaria_path(reserva_diaria), class: 'btn btn-theme'
+      %td= link_to 'Excluir', reserva_diaria, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: 'btn btn-theme'
 
 %br
 
-= link_to 'New Reserva diaria', new_reserva_diaria_path
+= link_to 'Cadastar Reserva de diaria', new_reserva_diaria_path, class:'btn btn-theme02 btn-lg'
