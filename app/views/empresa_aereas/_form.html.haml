@@ -2,9 +2,9 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :nome
-    = f.input :cnpj
-    = f.input :email
+    = f.input :nome, class: 'form-control round-form'
+    = f.input :cnpj, class: 'form-control round-form'
+    = f.input :email, class: 'form-control round-form'
 
   .form-actions
-    = f.button :submit, 'Salvar'
+    = f.button :submit, 'Salvar', class: 'btn btn-round btn-danger'
